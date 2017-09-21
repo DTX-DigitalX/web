@@ -1,0 +1,87 @@
+.card{
+  margin-top: 2%;
+  border-radius: 7px;
+  padding: 15px 60px 22px 60px;
+  box-shadow: 0px 1px 7px #95989A;
+}
+
+label:hover{
+  color: #F7941E;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  p{
+    text-align: center;
+    color: #7D7D7D;
+    }
+  
+  a{
+    color: #09AABC;      
+      &:hover{
+          color: #F7941E;
+      }
+    }  
+}
+
+.label-up {
+ margin-bottom: 15px;
+ }
+
+input {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #464a4c;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  height: 47px;
+  transition: all 0.2s ease-in-out;
+}
+.form-label {
+  fieldset {
+    position: relative;
+  }
+  label {
+    pointer-events: none;
+    position: absolute;
+    top: 15px;
+    left: 8px;
+    color: #909090;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.form-css-label {
+  input {
+    &[data-empty="false"],
+    &:valid,
+    &:disabled,
+    &:focus {
+      padding: 22px 8px 10px;
+    }
+    &:focus {
+      outline: 0;
+      background: rgba(255,255,255,1);
+    }
+    &[data-empty="false"] + label,
+    &:disabled + label,
+    &:valid + label,
+    &:focus + label {
+      color: #b7b5b5;
+      font-size: 10px;
+      transform: translate3d(0, -10px, 0);
+    }
+  }
+}
+

@@ -1,0 +1,11 @@
+<div class="wrapper">
+    <div *ngIf="showMenu" class="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div [ngClass]="{'main-panel': showMenu}">
+        <app-navbar *ngIf="showMenu"></app-navbar>
+        <div class="content">
+            <router-outlet (activate)="onActivate($event, outlet)" #outlet></router-outlet>
+        </div>
+    </div>
+</div>

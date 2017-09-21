@@ -1,0 +1,149 @@
+.bs-wizard {
+
+    i {
+        position: absolute;
+        z-index: 1;
+        color: #fff;
+        
+        &.exclamation {
+            font-size: 28px;
+            top: 19%;
+            right: 27%;
+            margin-left: -17px;
+        }
+
+        &.question {
+            font-size: 35px;
+            top: 9%;
+            right: 30%;
+            margin-left: -17px;
+        }
+           
+        &.sent {
+            font-size: 26px;
+            top: 20%;
+            right: 38%;
+            margin-left: -17px;
+        }
+    
+    }
+   
+}
+
+.bs-wizard {
+     padding: 0 0 10px 0;
+    
+ .bs-wizard-step {
+     padding: 0; 
+     position: relative;
+    }
+}
+.bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
+    color: #A7A9AC; 
+    font-size: 16px; 
+    margin-bottom: 2px;
+    margin-top: 34px;
+    padding-left: 18px;
+    
+    &.date{
+        margin-top: 0px;
+        font-size: 12px;
+    }
+}
+.bs-wizard > .bs-wizard-step .bs-wizard-info {
+    color: #A7A9AC; 
+    font-size: 14px;
+}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot {
+    position: absolute; 
+    width: 50px; 
+    height: 50px; 
+    display: block;
+    background: white;
+    top: 14px;
+    border: 3px solid #09AABC;   
+    left: 50%; 
+    margin-top: -15px; 
+    margin-left: -15px; 
+    border-radius: 50%;
+} 
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {
+    content: ' '; 
+    width: 38px;
+    height: 38px;
+    background: #09AABC;
+    border-radius: 50px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+} 
+.bs-wizard > .bs-wizard-step > .progress {
+    position: relative; 
+    border-radius: 0px; 
+    height: 8px; 
+    background-color: #A7A9AC; 
+    box-shadow: none; 
+    margin: 20px 0;
+}
+.bs-wizard > .bs-wizard-step > .progress > .progress-bar {
+    width:0px; 
+    box-shadow: none; 
+    background: #09AABC;
+}
+.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {
+    width:100%;}
+.bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {
+    width:50%;
+}
+.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
+    width:0%;
+}
+.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {
+    width: 100%;
+}
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
+    background-color: white;
+    border: 3px solid #A7A9AC;   
+}
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {
+    background-color: #A7A9AC;
+}
+.bs-wizard > .bs-wizard-step:first-child  > .progress {
+    left: 50%; width: 50%;
+}
+.bs-wizard > .bs-wizard-step:last-child  > .progress {
+    width: 50%;
+}
+.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{ 
+    pointer-events: none; 
+}
+
+.card {
+    border-radius: 10px;
+}
+.icon-image {
+    margin: 8px 0 9px 0;
+}
+.card-block-idea{
+    padding-bottom: 1px;    
+}
+.card-idea {
+    min-height: 511px;    
+}
+.card-products {
+    min-height: 511px;    
+}
+.card-img-top {
+    height: 250px;
+    border-radius: 9px;
+}
+
+.blue {
+    color: #09AABC;
+}
+
+.yellow {
+    color: #F7941E;
+}
+
+

@@ -1,0 +1,90 @@
+<div class="login-background">
+  <div class="justify-content-center">
+    <div class="col-lg-4 col-md-6 col-sm-8 card	">
+      <!-- LOGO -->
+      <div class="row justify-content-center">
+        <div class="col-8">
+          <img src="../../assets/images/Logo_digital_x_b.svg" class="logo img-responsive" salt="DTX - Digital X">
+        </div>
+      </div>
+      <!-- USUARIO -->
+      <form [hidden]="!showLoginFormUser" [formGroup]="loginFormUser" (ngSubmit)="userData()" role="form" class="content" name="loginFormUser"
+        novalidate="">
+        <div>
+          <div class="row">
+            <div class="col-12">
+              <strong><label>Usuário</label></strong>
+              <input formControlName="username" autofocus="" type="text" id="login" class="form-control" placeholder="Matrícula ou e-mail"
+                aria-describedby="basic-addon1">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="d-flex align-right">
+                <p class="input-invalid" *ngIf="loginFormUser.controls.username.hasError('required')  && (loginFormUser.controls.username.dirty  || submitAttemptLogin)">* Matrícula ou e-mail é obrigatório</p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-center">
+            <p class="input-invalid" *ngIf="msgError">* {{ msgError }}</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="float-right">
+              <label class="" popover="Entre com número da Matrícula ou e-mail: é seu primeiro acesso? Preencha o campo senha com Número do seu CPF"
+                placement="bottom">Novo usuário?</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <button class="btn btn-login text-uppercase" type="submit"><strong>Próximo</strong></button>
+          </div>
+        </div>
+      </form>
+      <!-- SENHA -->
+      <form [hidden]="!showLoginFormPassword" [formGroup]="loginFormPassword" (ngSubmit)="login()" role="form" class="content"
+        name="loginFormPassword" novalidate="">
+        <div>
+          <!-- <div class="row">
+            <div class="col-12">
+            </div>
+          </div> -->
+          <div class="row">
+            <div class="col-12">
+              <h3>{{name}}</h3>
+              <img [src]="photo" [alt]="name" class="userPhoto">
+              <label>{{email}}</label> <a (click)="showLoginFormPassword = false;showLoginFormUser = true; msgError = null;"> <img  class="voltar float-right" src="../../assets/images/abort.png"
+                alt="voltar"></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <label>Senha</label>
+              <input formControlName="password" type="password" id="password" required="" class="form-control" aria-describedby="basic-addon1">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="d-flex align-right">
+                <p class="input-invalid" *ngIf="loginFormPassword.controls.password.hasError('required')  && (loginFormPassword.controls.password.dirty  || submitAttemptLogin)">* Senha é obrigatória</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex align-center">
+            <p class="input-invalid" *ngIf="msgError">* {{ msgError }}</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <button class="btn btn-login text-uppercase" type="submit"><strong>Próximo</strong></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>

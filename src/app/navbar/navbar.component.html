@@ -1,0 +1,43 @@
+<nav class="bg-faded nav-imagine fixed-imagine">
+  <div class="row d-flex align-items-center">
+
+    <div class="col col-2  hidden-lg-up">
+      <button type="button" class="navbar-toggle" (click)="sidebarToggle()">
+            <span class="sr-only"></span>
+            <span class="icon-bar bar1"></span>
+            <span class="icon-bar bar2"></span>
+            <span class="icon-bar bar3"></span>
+        </button>
+    </div>
+
+    <div class="col col-3 ">
+      <h5 class=" ">{{getTitle()}}</h5>
+    </div>
+
+    <div class="col col-lg-9 col-md-7 col-sm-7 d-flex justify-content-end">
+
+      <ul class="nav nav-pills ml-auto nav-option">
+        <li class="nav-item nav-option-item">
+          <a class="nav-link">
+          <i class="fa fa-bell" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="nav-item nav-option-item dropdown">
+          <a class="nav-link dropdown-toggle hidden-md-down" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <img src="../../assets/images/user.png" style="width: 31px; height: 31px" class="rounded-circle">
+              {{user?.name}}
+          </a>
+          <a class="nav-link hidden-md-up" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true">
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" (click)="logout()">Sair</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>

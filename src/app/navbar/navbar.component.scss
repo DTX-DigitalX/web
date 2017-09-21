@@ -1,0 +1,97 @@
+h5 {
+  padding-top: 10px;
+  font-size: 1.05rem;
+  margin-left: 33px;
+  
+}
+.nav-imagine{
+  position: fixed;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 7px #95989A;
+  -moz-box-shadow:    0px 1px 7px #95989A;
+  box-shadow:         0px 1px 7px #95989A;
+  z-index:999;
+  width: calc(100% - 260px);
+  height: 52px;
+  margin-bottom: 10px;
+}
+
+.nav-link{
+  margin-top: 4px;
+  font-size: 17px;        
+}
+.nav-pills .nav-link.active, .nav-pills .nav-item.show .nav-link{
+    background-color: #fff;
+    color: #95989A;
+}
+h3 {
+  display: inline;
+  margin: 15px 0 0 15px;
+}
+.nav-item  {
+  color: rgba(0,0,0,.5);
+}
+.nav-option{
+  .nav-option-item{
+    font-size: 24px;
+    padding-right: 30px; 
+  }
+}
+.dropdown-menu {
+  margin-left: 74px;
+}
+#fixedContainer {
+  width: 600px;
+  height: 200px;
+  left: 50%;
+  top: 0%;
+  margin-left: -300px; /*half the width*/
+}
+
+button {
+  padding-top: 5px;  
+  display: inline;
+  margin-left: 31px;
+  background: #fff;  
+  
+}
+// Mobile Styles
+
+@media only screen and (max-width: 768px) {
+  .navbar-brand{
+    margin-left: 70px;
+  }
+  
+  
+}
+
+@media (max-width: 991px){
+
+  .nav-imagine {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width : 720px) {
+    nav h5 {
+      margin-top: 0px;
+      margin-left: 0px;      
+    }
+    .nav-link{
+      margin-top: 0px;
+    }
+    button {
+      margin-top: 9px;      
+      margin-left: 14px;      
+    }
+    .dropdown-menu {
+      margin-left: -96px;
+    }
+    .nav-option{      
+      
+      .nav-option-item{
+        padding-right: 0px; 
+        font-size: 18px;        
+      }
+  }
+}

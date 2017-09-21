@@ -1,0 +1,144 @@
+.userPhoto {
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+}
+
+.voltar {
+  width: 16px;
+  height: 16px;
+  margin-top:8px;
+}
+
+h3 {
+  color: #ffffff;
+}
+
+.card {
+  margin-top: 8%;
+  border-radius: 7px;
+  padding: 20px 60px 22px 60px;
+  box-shadow: 0px 1px 7px #95989A;
+  background: rgba(0, 0, 0, 0.5);
+  label {
+    color: #ffffff;
+  }
+}
+
+.logo {
+  margin: 0 auto;
+  width: 50%; // height: 90%;
+  
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.input-invalid {
+  color: #FFFFFF !important;
+}
+
+button {
+  margin-top: 15px;
+}
+
+.pass-block {
+  margin-bottom: 16px;
+  label:hover {
+    color: #FFFFFF;
+  }
+}
+
+.form-control {
+  border-radius: 0rem;
+  background-color: rgba(0, 0, 0, 0.0);
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-color: #ffffff;
+  padding: 0.5rem 0;
+}
+
+input,
+select,
+textarea {
+  color: #ffffff !important;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: rgba(255, 255, 255, 0.5);
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(255, 255, 255, 0.5);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(255, 255, 255, 0.5);
+}
+
+// textarea:focus, input:focus {
+//   color: #12FC47 !important; // AQUI
+// }
+// textarea:active, input:active {
+//   color: #4D15D7 !important; // AQUI
+// }
+.input-invalid {
+  font-size: 12px;
+  display: block;
+  color: #F7941E;
+  margin: 3px;
+  margin-top: -8px;
+}
+
+.align-left {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.align-right {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-login {
+  display: block;
+  width: 100%;
+  line-height: 1.65 !important;
+  border-radius: 2.2rem !important;
+  background-color: #FFFFFF;
+  color: #000000;
+  &:hover {
+    background-color: #cccccc;
+  }
+}

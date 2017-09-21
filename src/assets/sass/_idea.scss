@@ -1,0 +1,173 @@
+.input-cover {
+    z-index: 2;
+    overflow: hidden;
+    position: relative;
+
+    a{
+        color: #000;
+        background-color: #fff;
+        padding: 10px 20px 10px 20px;
+        border: none;
+        border-radius: 10px;
+        margin: 10px;        
+    
+    &:hover{
+        background-color: #f5f5f5;
+    }
+}
+
+    [type=file] {
+        cursor: inherit;
+        font-size: 999px;
+        filter: alpha(opacity=0);
+        min-height: 100%;
+        min-width: 100%;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        text-align: right;
+        top: 0;
+    }
+}
+
+.card-img-top{
+    position: relative;
+    display: flex;
+    height: 260px;
+    border-radius: 9px;
+    
+     input{
+         color: #fff !important;
+     }
+ 
+    .box-shadow {
+         border-top-right-radius: 1em;
+         border-top-left-radius: 1em; 
+         position: relative;
+         height: 100%;
+         width: 100%;
+   }
+   
+   .box-shadow::after {
+         background:  linear-gradient(rgba(0,0,0,0) 35%, rgba(0,0,0, .53));
+         content: "";
+         display: block;
+         left: 0;
+         height: 100%;
+         position: absolute;
+         right: 0;
+         top: 0;
+         width: 100%;
+   }
+   .box-shadow img {
+         border-top-right-radius: 1em;
+         border-top-left-radius: 1em; 
+         width: 100%;
+         height: 100%;
+       }
+ }
+ 
+ .card-image-title{
+    position: absolute;
+    display: inline-flex;
+    align-items: flex-end;
+    padding: 0px 0px 30px 40px;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    text-rendering: optimizelegibility;
+    text-shadow: 0 0 3px rgba(0,0,0,.8);
+    
+    .text-title{
+        font-size: 1.75rem;
+        width: 100%;
+    }
+    i{
+        padding-right: 9px;
+    }
+
+    input{
+      background: transparent;
+      border:none;
+      width: 89%;
+    }
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #fff;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+        color: #fff;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+        color: #fff;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+        color: #fff;
+    }
+}
+
+.card-image-buttom{
+    position: absolute;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 40px 40px 0 0;
+    height: 100%;
+    width: 100%;
+
+    button{
+        font-size: 15px;
+        border: 1px solid #95989A;
+        background-color: #fff;
+        border-radius: 7px;
+        padding: 11px;
+    }
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    width: 130px;
+}
+
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.input-item{
+    padding: 0 0 10px 0; 
+
+    .input-icon{
+        position: relative;
+        font-size: 70px;
+        color: #95989A;
+        padding-left: 14px;
+    }
+    .input-remover{
+        font-size: 30px;
+        position: absolute;
+        color: #F7941E;  
+        right: auto;
+        top: 2px;        
+        left: 78px;
+    }
+}
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+.card-image-title{        
+    input{
+        width: 70%;
+    }
+}
+}

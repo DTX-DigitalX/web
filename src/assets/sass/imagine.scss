@@ -1,0 +1,98 @@
+/*!
+
+ =========================================================
+ * Imagine - V2.0.0
+ =========================================================
+
+ */        
+
+// Variables
+ @import "variables";
+// Fonts
+@import "themify";
+
+// Mixins
+@import "mixins/transparency";
+@import "mixins/vendor-prefixes";
+
+@import "animate";
+@import "card";
+@import "idea";
+@import "navbars";
+@import "typography";
+@import "login";
+
+@import "mixins";
+@import "sidebar-and-main-panel";
+@import "responsive";
+@import "misc";
+
+.btn-material {
+  position: fixed;
+  bottom: 0px;
+  right: 0px; 
+  z-index: 1;
+  margin: 30px 60px;
+  background-color: #09AABC;
+  color: #ecf0f1;
+  transition: background-color .3s;
+  border-radius: 30px;
+  height: 50px;
+  width: 50px;
+  border: 0px;  
+  
+  i{
+    margin-top: 4px;
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  &:hover {
+    background-color: #09AABC;
+  }
+}
+
+.btn-imagine{
+  background-color: #09AABC;
+  color: #fff;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  border-radius: 29px;
+  margin: 10px;
+  
+  &.upload {
+    padding: 10px 20px 10px 15px;
+  }
+  &.disable{
+      background-color: #95989A;
+  }
+}
+
+input[type="text"]:disabled {
+  opacity: 0.65 !important; 
+  cursor: not-allowed;
+}
+
+.input-sucess{
+  font-size: 10px;
+  color: #199c00;
+  padding: 4px 0 0 9px;
+      input{
+        border: 1px solid #199c00;
+      };
+      label{
+        color: #199c00;
+      }
+}
+
+.input-error{
+  font-size: 10px;
+  color: rgba(255, 0, 0, 0.58);
+  padding: 4px 0 0 9px;
+      input{
+        border: 1px solid hsla(0, 100%, 50%, 0.48)
+      };
+      label{
+        color: rgba(255, 0, 0, 0.58);
+      }
+}

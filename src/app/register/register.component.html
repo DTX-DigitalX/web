@@ -1,0 +1,115 @@
+<div class="login-background">
+  <div class="justify-content-center">
+    <div class="col-lg-5 col-md-7 col-sm-9 card	">
+      <form [formGroup]="registerForm" (ngSubmit)="register()" novalidate class="content form-label form-css-label">
+
+        <div class="row justify-content-center">
+          <div class="col-8">
+            <img src="../../assets/images/logo-dark.png" class="logo">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="label-up">
+              <fieldset>
+                <input type="text" [(ngModel)]="user.name" formControlName="name" id="name" disabled/>
+                <label>Nome completo</label>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="label-up">
+              <fieldset>
+                <input type="text" class="form-control" [required]="!user.email && !user.phone" formControlName="email" [(ngModel)]="user.email">
+                <label>E-mail</label>
+              </fieldset>
+              <p class="input-error" *ngIf="registerForm.controls.email.hasError('required') && (registerForm.controls.phone.hasError('required')  && submitAttemptRegister)">* Preencha o telefone ou o email</p>
+              <p class="input-error" *ngIf="registerForm.controls.email.hasError('email') &&  submitAttemptRegister">* Email inválido</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="label-up">
+              <fieldset>
+                <input type="text" [textMask]="{mask: phone}" [required]="!user.email && !user.phone" [(ngModel)]="user.phone" formControlName="phone">
+                <label>Telefone</label>
+              </fieldset>
+
+              <p class="input-error" *ngIf="registerForm.controls.phone.hasError('minLength')">* Número de telefone invalido</p>
+              <p class="input-error" *ngIf="registerForm.controls.email.hasError('required') && (registerForm.controls.phone.hasError('required') && submitAttemptRegister)">* Preencha o telefone ou o email</p>
+              <p class="input-error" *ngIf="registerForm.controls.phone.hasError('phoneLength') && (registerForm.controls.phone.hasError('phoneLength') && submitAttemptRegister)">* Telefone incompleto</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="label-up">
+              <fieldset>
+                <input type="text" [textMask]="{mask: cpf}" [(ngModel)]="user.document" disabled formControlName="document" aria-describedby="basic-addon1">
+                <label>CPF</label>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="label-up">
+              <fieldset>
+                <input type="text" [(ngModel)]="user.enrolment" disabled formControlName="enrolment" aria-describedby="basic-addon1">
+                <label>Matrícula</label>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="label-up">
+              <fieldset>
+                <input type="password" class="form-control" [(ngModel)]="user.password" formControlName="password" required>
+                <label>Senha</label>
+              </fieldset>
+              <p class="input-error" *ngIf="registerForm.controls.password.hasError('required') && (registerForm.controls.password.dirty || submitAttemptRegister)">* Senha é obrigatório</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="label-up">
+              <fieldset>
+                <input type="password" class="form-control" [(ngModel)]="user.confirmPassword" formControlName="confirmPassword" required>
+                <label>Digite a senha novamente</label>
+              </fieldset>
+              <p class="input-error" *ngIf="registerForm.controls.confirmPassword.hasError('required') && (registerForm.controls.confirmPassword.dirty || submitAttemptRegister)">* Confirmar senha é obrigatório</p>
+              <p class="input-error" *ngIf="registerForm.controls.confirmPassword.hasError('notEquivalent') && (registerForm.controls.confirmPassword.dirty || submitAttemptRegister)">* As senhas são diferentes</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="align-center">
+          <div class="col-10">
+            <p> Ao efetuar cadastro, você está aceitando nossos <a>termos de uso</a> e <a href="http://duratex-imagine-webapp.azurewebsites.net/regulamento-imagine"
+                target="_blank">regulamento</a> </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <button class="btn btn-login" type="submit"> Atualizar Cadastro </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
